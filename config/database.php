@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => 'pgsql',
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -66,11 +66,11 @@ return [
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
-            'host' => 'app-8cfb8428-1afc-4256-8fb6-ade6d618c907-do-user-11834739-0.b.db.ondigitalocean.com',
-            'port' => '25060',
-            'database' => 'db',
-            'username' => 'db',
-            'password' => 'AVNS_GhGOCfW9mXqNqdWkkV6',
+            'host' => env('DB_HOST', 'app-8cfb8428-1afc-4256-8fb6-ade6d618c907-do-user-11834739-0.b.db.ondigitalocean.com'),
+            'port' => env('DB_PORT', '25060'),
+            'database' => env('DB_DATABASE', 'db'),
+            'username' => env('DB_USERNAME', 'db'),
+            'password' => env('DB_PASSWORD', 'AVNS_GhGOCfW9mXqNqdWkkV6'),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
